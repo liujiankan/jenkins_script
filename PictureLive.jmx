@@ -167,9 +167,9 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
           <stringProp name="username">ai_image</stringProp>
         </JDBCDataSource>
         <hashTree/>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="获取模板列表" enabled="false"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="获取模板列表" enabled="true"/>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="获取首页模板" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="获取首页模板" enabled="true">
             <stringProp name="HTTPSampler.path">/api/airepair/homepage/tags</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -180,7 +180,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言-断言返回结果包含模板名称" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言-断言返回结果包含模板名称" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-976163291">templateName</stringProp>
               </collectionProp>
@@ -191,11 +191,11 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="获取标签下模板" enabled="false">
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="获取标签下模板" enabled="true">
             <stringProp name="LoopController.loops">4</stringProp>
           </LoopController>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="根据tagId获取模板" enabled="false">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="根据tagId获取模板" enabled="true">
               <stringProp name="HTTPSampler.path">/api/airepair/homepage/tags/template</stringProp>
               <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
               <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -230,7 +230,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
               </elementProp>
             </HTTPSamplerProxy>
             <hashTree>
-              <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV 数据文件设置" enabled="false">
+              <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV 数据文件设置" enabled="true">
                 <stringProp name="filename">/Users/home/Downloads/liujiankang/jmeter_script/tag.csv</stringProp>
                 <stringProp name="fileEncoding">UTF-8</stringProp>
                 <stringProp name="variableNames">tagId,curPage</stringProp>
@@ -242,7 +242,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
                 <stringProp name="shareMode">shareMode.all</stringProp>
               </CSVDataSet>
               <hashTree/>
-              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言-断言返回结果包含模板Code" enabled="false">
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言-断言返回结果包含模板Code" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="-976477817">templateCode</stringProp>
                 </collectionProp>
@@ -254,7 +254,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="魔法视频列表" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="魔法视频列表" enabled="true">
             <stringProp name="HTTPSampler.path">/api/airepair/magic-video/templates</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -287,7 +287,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言-断言返回结果包含模板名称" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言-断言返回结果包含模板名称" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-976163291">templateName</stringProp>
               </collectionProp>
@@ -298,7 +298,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="拥抱模板分页返回" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="拥抱模板分页返回" enabled="true">
             <stringProp name="HTTPSampler.path">/api/airepair/hug/template</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -324,7 +324,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-976163291">templateName</stringProp>
               </collectionProp>
@@ -335,7 +335,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="拥抱模板全部返回" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="拥抱模板全部返回" enabled="true">
             <stringProp name="HTTPSampler.path">/api/airepair/hug/template/all</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -346,7 +346,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-976163291">templateName</stringProp>
               </collectionProp>
@@ -360,7 +360,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
         </hashTree>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="生成视频任务" enabled="true"/>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="图片限制检测">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="图片限制检测" enabled="true">
             <stringProp name="HTTPSampler.path">/api/airepair/detect/image</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -385,7 +385,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON断言">
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON断言" enabled="true">
               <stringProp name="JSON_PATH">$.result.pass</stringProp>
               <stringProp name="EXPECTED_VALUE">true</stringProp>
               <boolProp name="JSONVALIDATION">true</boolProp>
@@ -395,7 +395,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </JSONPathAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="提交拥抱视频任务" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="提交拥抱视频任务" enabled="true">
             <stringProp name="HTTPSampler.path">api/airepair/hug/submit</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -416,18 +416,18 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON提取器" enabled="false">
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON提取器" enabled="true">
               <stringProp name="JSONPostProcessor.referenceNames">batchId</stringProp>
               <stringProp name="JSONPostProcessor.jsonPathExprs">$.result.batchId</stringProp>
               <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
               <stringProp name="JSONPostProcessor.defaultValues">default</stringProp>
             </JSONPostProcessor>
             <hashTree/>
-            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="false">
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
               <stringProp name="ConstantTimer.delay">3000</stringProp>
             </ConstantTimer>
             <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-331744779">batchId</stringProp>
               </collectionProp>
@@ -438,11 +438,11 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While控制器" enabled="false">
+          <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While控制器" enabled="true">
             <stringProp name="WhileController.condition">${__jexl3(&quot;${dealStatus}&quot; == 3,)}</stringProp>
           </WhileController>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="轮询视频生成结果" enabled="false">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="轮询视频生成结果" enabled="true">
               <stringProp name="HTTPSampler.path">/api/airepair/hug/query</stringProp>
               <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
               <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -461,11 +461,11 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
               </elementProp>
             </HTTPSamplerProxy>
             <hashTree>
-              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="false">
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
                 <stringProp name="ConstantTimer.delay">2000</stringProp>
               </ConstantTimer>
               <hashTree/>
-              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="-331744779">batchId</stringProp>
                 </collectionProp>
@@ -475,7 +475,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
                 <intProp name="Assertion.test_type">16</intProp>
               </ResponseAssertion>
               <hashTree/>
-              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON提取器" enabled="false">
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON提取器" enabled="true">
                 <stringProp name="JSONPostProcessor.referenceNames">dealStatus</stringProp>
                 <stringProp name="JSONPostProcessor.jsonPathExprs">$.result.dealStatus</stringProp>
                 <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
@@ -484,7 +484,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="批量查询视频生成结果" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="批量查询视频生成结果" enabled="true">
             <stringProp name="HTTPSampler.path">/api/airepair/hug/queryBatch</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -505,11 +505,11 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="false">
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
               <stringProp name="ConstantTimer.delay">1000</stringProp>
             </ConstantTimer>
             <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="93509434">batch</stringProp>
               </collectionProp>
@@ -520,7 +520,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="视频生成记录-按算法分类统计" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="视频生成记录-按算法分类统计" enabled="true">
             <stringProp name="HTTPSampler.path">/api/airepair/hug/count</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -531,7 +531,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-1892463147">firstSubmitTime</stringProp>
               </collectionProp>
@@ -542,7 +542,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="视频生成记录" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="视频生成记录" enabled="true">
             <stringProp name="HTTPSampler.path">/api/airepair/hug/list</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -575,7 +575,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="3076010">data</stringProp>
               </collectionProp>
@@ -617,13 +617,13 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="IF 控制器" enabled="false">
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="IF 控制器" enabled="true">
             <stringProp name="IfController.condition">${__jexl3(${dealStatus}!=3,)}</stringProp>
             <boolProp name="IfController.evaluateAll">false</boolProp>
             <boolProp name="IfController.useExpression">true</boolProp>
           </IfController>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="删除生成记录" enabled="false">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="删除生成记录" enabled="true">
               <stringProp name="TestPlan.comments">生成中的视频无法删除</stringProp>
               <stringProp name="HTTPSampler.path">/api/airepair/hug/delete</stringProp>
               <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -645,11 +645,11 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
               </elementProp>
             </HTTPSamplerProxy>
             <hashTree>
-              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="false">
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
                 <stringProp name="ConstantTimer.delay">2000</stringProp>
               </ConstantTimer>
               <hashTree/>
-              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="49586">200</stringProp>
                 </collectionProp>
@@ -661,7 +661,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="验证数据库数据包含刚生成的记录并被成功删除" enabled="false">
+          <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="验证数据库数据包含刚生成的记录并被成功删除" enabled="true">
             <stringProp name="dataSource">mysql</stringProp>
             <stringProp name="query">select * from airepair_hug_record where batch_Id = &quot;${batchId}&quot; and deleted = 1</stringProp>
             <stringProp name="queryArguments"></stringProp>
@@ -674,7 +674,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             <stringProp name="variableNames"></stringProp>
           </JDBCSampler>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="842695423">${batchId}</stringProp>
               </collectionProp>
@@ -685,7 +685,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="获取用户下次处理时间" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="获取用户下次处理时间" enabled="true">
             <stringProp name="HTTPSampler.path">/api/airepair/hug/next</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -696,7 +696,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="false">
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
               <collectionProp name="HeaderManager.headers">
                 <elementProp name="version" elementType="Header">
                   <stringProp name="Header.name">version</stringProp>
@@ -749,7 +749,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
               </collectionProp>
             </HeaderManager>
             <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-1278314169">nextSecond</stringProp>
               </collectionProp>
@@ -761,9 +761,9 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="加速券相关接口" enabled="false"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="加速券相关接口" enabled="true"/>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="加速券购买&amp;退款记录" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="加速券购买&amp;退款记录" enabled="true">
             <stringProp name="HTTPSampler.path">/api/airepair/hug/advance/record/buy</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -789,7 +789,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="3076010">data</stringProp>
               </collectionProp>
@@ -800,7 +800,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="加速券使用记录" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="加速券使用记录" enabled="true">
             <stringProp name="HTTPSampler.path">/api/airepair/hug/advance/record/use</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -828,7 +828,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="3076010">data</stringProp>
               </collectionProp>
@@ -839,7 +839,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="批量加速" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="批量加速" enabled="true">
             <stringProp name="HTTPSampler.path">/api/airepair/hug/advance/batchIds</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -858,7 +858,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-1709277061">&quot;ret&quot;:200</stringProp>
                 <stringProp name="-1447770770">&quot;ret&quot;:9220</stringProp>
@@ -871,7 +871,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="全部加速" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="全部加速" enabled="true">
             <stringProp name="HTTPSampler.path">/api/airepair/hug/advance/all</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -882,7 +882,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-1709277061">&quot;ret&quot;:200</stringProp>
                 <stringProp name="-1447770770">&quot;ret&quot;:9220</stringProp>
@@ -896,11 +896,11 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="获取预置素材—循环控制器" enabled="false">
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="获取预置素材—循环控制器" enabled="true">
           <stringProp name="LoopController.loops">7</stringProp>
         </LoopController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="获取预置素材" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="获取预置素材" enabled="true">
             <stringProp name="TestPlan.comments">1：图片增强素材；2：黑白图素材；3：图片放大素材；4：图片擦除素材；5：抠图素材；6：动物表情素材；7：变老素材</stringProp>
             <stringProp name="HTTPSampler.path">api/airepair/preset/enhance</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -920,7 +920,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="1709412821">originImage</stringProp>
               </collectionProp>
@@ -932,11 +932,11 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="是否有历史记录-循环控制器" enabled="false">
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="是否有历史记录-循环控制器" enabled="true">
           <stringProp name="LoopController.loops">7</stringProp>
         </LoopController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="是否有历史记录" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="是否有历史记录" enabled="true">
             <stringProp name="HTTPSampler.path">/api/airepair/guide/history</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -955,7 +955,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="1848018809">isSuccess</stringProp>
               </collectionProp>
@@ -967,9 +967,9 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="图片处理" enabled="false"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="图片处理" enabled="true"/>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="图片放大" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="图片放大" enabled="true">
             <stringProp name="HTTPSampler.path">api/airepair/image/amplify</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -988,7 +988,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-1452704327">&quot;dealStatus&quot;:1</stringProp>
               </collectionProp>
@@ -1019,7 +1019,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="抠图" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="抠图" enabled="true">
             <stringProp name="HTTPSampler.path">api/airepair/image/matting</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -1038,7 +1038,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-1452704327">&quot;dealStatus&quot;:1</stringProp>
               </collectionProp>
@@ -1049,7 +1049,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="图片增强" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="图片增强" enabled="true">
             <stringProp name="HTTPSampler.path">/api/airepair/image/enhance</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -1068,7 +1068,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-1452704327">&quot;dealStatus&quot;:1</stringProp>
                 <stringProp name="-1447921709">&quot;ret&quot;:4000</stringProp>
@@ -1081,9 +1081,9 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="AI写真" enabled="false"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="AI写真" enabled="true"/>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="分页获取所有活动" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="分页获取所有活动" enabled="true">
             <stringProp name="HTTPSampler.path">/api/face/material/getAllActivity</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -1109,7 +1109,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="2048619658">activityId</stringProp>
               </collectionProp>
@@ -1120,7 +1120,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="预置写真造型" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="预置写真造型" enabled="true">
             <stringProp name="HTTPSampler.path">api/face/preset/material</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -1131,7 +1131,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="2048619658">activityId</stringProp>
               </collectionProp>
@@ -1142,11 +1142,11 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="面部档案管理列表" enabled="false">
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="面部档案管理列表" enabled="true">
             <stringProp name="LoopController.loops">2</stringProp>
           </LoopController>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="面部档案管理列表" enabled="false">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="面部档案管理列表" enabled="true">
               <stringProp name="HTTPSampler.path">/api/face/profiles/manage/listV2</stringProp>
               <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
               <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -1165,7 +1165,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
               </elementProp>
             </HTTPSamplerProxy>
             <hashTree>
-              <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV 数据文件设置" enabled="false">
+              <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV 数据文件设置" enabled="true">
                 <stringProp name="filename">/Users/home/Downloads/liujiankang/jmeter_script/face_profiles_list.csv</stringProp>
                 <stringProp name="fileEncoding"></stringProp>
                 <stringProp name="variableNames">profileType,assert</stringProp>
@@ -1177,7 +1177,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
                 <stringProp name="shareMode">shareMode.all</stringProp>
               </CSVDataSet>
               <hashTree/>
-              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="false">
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
                 <collectionProp name="HeaderManager.headers">
                   <elementProp name="version" elementType="Header">
                     <stringProp name="Header.name">version</stringProp>
@@ -1238,7 +1238,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
                 </collectionProp>
               </HeaderManager>
               <hashTree/>
-              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="-1731321536">${assert}</stringProp>
                 </collectionProp>
@@ -1251,9 +1251,9 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </hashTree>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="变小孩任务" enabled="false"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="变小孩任务" enabled="true"/>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="预置变小孩素材" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="预置变小孩素材" enabled="true">
             <stringProp name="HTTPSampler.path">api/baby/preset/material</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -1264,7 +1264,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-1003673900">&quot;presetCode&quot;</stringProp>
               </collectionProp>
@@ -1275,7 +1275,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="提交预置变小孩任务" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="提交预置变小孩任务" enabled="true">
             <stringProp name="HTTPSampler.path">api/baby/predict</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -1307,7 +1307,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="提交变小孩任务" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="提交变小孩任务" enabled="true">
             <stringProp name="HTTPSampler.path">api/baby/predict</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -1328,7 +1328,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-331744779">batchId</stringProp>
               </collectionProp>
@@ -1339,7 +1339,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="变小孩生成记录" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="变小孩生成记录" enabled="true">
             <stringProp name="HTTPSampler.path">/api/baby/list</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -1365,7 +1365,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-331744779">batchId</stringProp>
               </collectionProp>
@@ -1377,9 +1377,9 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="动物表情识别" enabled="false"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="动物表情识别" enabled="true"/>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="提交动物表情识别任务" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="提交动物表情识别任务" enabled="true">
             <stringProp name="HTTPSampler.path">api/airepair/animal/expression</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -1398,7 +1398,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-1452704327">&quot;dealStatus&quot;:1</stringProp>
                 <stringProp name="-1452704326">&quot;dealStatus&quot;:2</stringProp>
@@ -1410,7 +1410,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="提交动物表情识别任务返回多语" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="提交动物表情识别任务返回多语" enabled="true">
             <stringProp name="HTTPSampler.path">api/airepair/animal/expression/v2</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -1429,7 +1429,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-1452704327">&quot;dealStatus&quot;:1</stringProp>
                 <stringProp name="-1452704326">&quot;dealStatus&quot;:2</stringProp>
@@ -1441,7 +1441,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="语音播放" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="语音播放" enabled="true">
             <stringProp name="HTTPSampler.path">/api/airepair/animal/tts</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -1471,7 +1471,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="1989722788">&quot;message&quot;:&quot;Success&quot;</stringProp>
               </collectionProp>
@@ -1483,9 +1483,9 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="AI换装" enabled="false"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="AI换装" enabled="true"/>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AI换装-图片检测" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AI换装-图片检测" enabled="true">
             <stringProp name="HTTPSampler.path">/api/airepair/clothe/image/detect</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -1504,7 +1504,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="2138021593">&quot;pass&quot;:true</stringProp>
               </collectionProp>
@@ -1515,7 +1515,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="模特素材" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="模特素材" enabled="true">
             <stringProp name="HTTPSampler.path">api/airepair/clothe/material/model</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -1541,7 +1541,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-859610604">imageUrl</stringProp>
               </collectionProp>
@@ -1552,7 +1552,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="衣服素材" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="衣服素材" enabled="true">
             <stringProp name="HTTPSampler.path">api/airepair/clothe/material/clothes</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -1578,7 +1578,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-859610604">imageUrl</stringProp>
               </collectionProp>
@@ -1589,7 +1589,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="提交换装任务" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="提交换装任务" enabled="true">
             <stringProp name="HTTPSampler.path">/api/airepair/clothe/submit</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -1611,7 +1611,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-1452704328">&quot;dealStatus&quot;:0</stringProp>
               </collectionProp>
@@ -1621,18 +1621,18 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
               <intProp name="Assertion.test_type">16</intProp>
             </ResponseAssertion>
             <hashTree/>
-            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON提取器" enabled="false">
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON提取器" enabled="true">
               <stringProp name="JSONPostProcessor.referenceNames">clotheBatchId</stringProp>
               <stringProp name="JSONPostProcessor.jsonPathExprs">$.result.batchId</stringProp>
               <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
             </JSONPostProcessor>
             <hashTree/>
           </hashTree>
-          <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="查询换装结果-轮询" enabled="false">
+          <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="查询换装结果-轮询" enabled="true">
             <stringProp name="WhileController.condition">${__jexl3(&quot;${clotheDealStatus}&quot; == 3 ||&quot;${clotheDealStatus}&quot; == 0)}</stringProp>
           </WhileController>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="查询换装结果" enabled="false">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="查询换装结果" enabled="true">
               <stringProp name="HTTPSampler.path">/api/airepair/clothe/query</stringProp>
               <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
               <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -1651,13 +1651,13 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
               </elementProp>
             </HTTPSamplerProxy>
             <hashTree>
-              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON提取器" enabled="false">
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON提取器" enabled="true">
                 <stringProp name="JSONPostProcessor.referenceNames">clotheDealStatus</stringProp>
                 <stringProp name="JSONPostProcessor.jsonPathExprs">$.result.dealStatus</stringProp>
                 <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
               </JSONPostProcessor>
               <hashTree/>
-              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="-1452704327">&quot;dealStatus&quot;:1</stringProp>
                   <stringProp name="-1452704328">&quot;dealStatus&quot;:0</stringProp>
@@ -1668,13 +1668,13 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
                 <intProp name="Assertion.test_type">48</intProp>
               </ResponseAssertion>
               <hashTree/>
-              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="false">
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="固定定时器" enabled="true">
                 <stringProp name="ConstantTimer.delay">5000</stringProp>
               </ConstantTimer>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AI换装记录" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="AI换装记录" enabled="true">
             <stringProp name="HTTPSampler.path">/api/airepair/clothe/list</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -1700,7 +1700,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-859610604">imageUrl</stringProp>
               </collectionProp>
@@ -1710,20 +1710,20 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
               <intProp name="Assertion.test_type">16</intProp>
             </ResponseAssertion>
             <hashTree/>
-            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON提取器" enabled="false">
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON提取器" enabled="true">
               <stringProp name="JSONPostProcessor.referenceNames">clotheId</stringProp>
               <stringProp name="JSONPostProcessor.jsonPathExprs">$.result.data[0].id</stringProp>
               <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
             </JSONPostProcessor>
             <hashTree/>
-            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON提取器" enabled="false">
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON提取器" enabled="true">
               <stringProp name="JSONPostProcessor.referenceNames">clotheBatchId</stringProp>
               <stringProp name="JSONPostProcessor.jsonPathExprs">$.result.data[1].batchId</stringProp>
               <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
             </JSONPostProcessor>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="删除换装记录" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="删除换装记录" enabled="true">
             <stringProp name="HTTPSampler.path">api/airepair/clothe/delete</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -1742,7 +1742,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-1709277061">&quot;ret&quot;:200</stringProp>
               </collectionProp>
@@ -1753,11 +1753,11 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="false">
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
             <stringProp name="LoopController.loops">2</stringProp>
           </LoopController>
           <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="衣服素材分类" enabled="false">
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="衣服素材分类" enabled="true">
               <stringProp name="HTTPSampler.path">api/airepair/clothe/category/clothes</stringProp>
               <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
               <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -1776,7 +1776,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
               </elementProp>
             </HTTPSamplerProxy>
             <hashTree>
-              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
                 <collectionProp name="Asserion.test_strings">
                   <stringProp name="3373707">name</stringProp>
                 </collectionProp>
@@ -1788,7 +1788,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="衣服分类详情" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="衣服分类详情">
             <stringProp name="HTTPSampler.path">api/airepair/clothe/category/clothes/detail</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -1821,7 +1821,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-859610604">imageUrl</stringProp>
               </collectionProp>
@@ -1832,7 +1832,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="新手引导服装素材" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="新手引导服装素材" enabled="true">
             <stringProp name="HTTPSampler.path">api/airepair/clothe/material/guide</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -1843,7 +1843,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-859610604">imageUrl</stringProp>
               </collectionProp>
@@ -1854,7 +1854,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="评分" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="评分">
             <stringProp name="HTTPSampler.path">api/airepair/score/save</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -1875,7 +1875,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="-1709277061">&quot;ret&quot;:200</stringProp>
               </collectionProp>
