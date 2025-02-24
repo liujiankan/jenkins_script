@@ -231,7 +231,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </HTTPSamplerProxy>
             <hashTree>
               <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV 数据文件设置" enabled="true">
-                <stringProp name="filename">/Users/home/Downloads/liujiankang/jmeter_script/tag.csv</stringProp>
+                <stringProp name="filename">./data/tag.csv</stringProp>
                 <stringProp name="fileEncoding">UTF-8</stringProp>
                 <stringProp name="variableNames">tagId,curPage</stringProp>
                 <boolProp name="ignoreFirstLine">true</boolProp>
@@ -685,7 +685,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="获取用户下次处理时间" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="获取用户下次处理时间">
             <stringProp name="HTTPSampler.path">/api/airepair/hug/next</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -1083,7 +1083,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
         </hashTree>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="AI写真" enabled="true"/>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="分页获取所有活动" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="分页获取所有活动">
             <stringProp name="HTTPSampler.path">/api/face/material/getAllActivity</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -1166,7 +1166,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </HTTPSamplerProxy>
             <hashTree>
               <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV 数据文件设置" enabled="true">
-                <stringProp name="filename">/Users/home/Downloads/liujiankang/jmeter_script/face_profiles_list.csv</stringProp>
+                <stringProp name="filename">./data/face_profiles_list.csv</stringProp>
                 <stringProp name="fileEncoding"></stringProp>
                 <stringProp name="variableNames">profileType,assert</stringProp>
                 <boolProp name="ignoreFirstLine">true</boolProp>
@@ -1753,7 +1753,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器">
             <stringProp name="LoopController.loops">2</stringProp>
           </LoopController>
           <hashTree>
@@ -1788,7 +1788,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="衣服分类详情">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="衣服分类详情" enabled="true">
             <stringProp name="HTTPSampler.path">api/airepair/clothe/category/clothes/detail</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -1832,7 +1832,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="新手引导服装素材" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="新手引导服装素材">
             <stringProp name="HTTPSampler.path">api/airepair/clothe/material/guide</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -1854,7 +1854,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="评分">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="评分" enabled="true">
             <stringProp name="HTTPSampler.path">api/airepair/score/save</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
