@@ -6,8 +6,6 @@
         <collectionProp name="Arguments.arguments"/>
       </elementProp>
       <stringProp name="TestPlan.user_define_classpath">/Users/home/Downloads/apache-jmeter-5.6.3/lib/ext/rt.jar,/Users/home/Downloads/apache-jmeter-5.6.3/lib/ext/mysql-connector-j-9.2.0.jar</stringProp>
-      <boolProp name="TestPlan.functional_mode">false</boolProp>
-      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
     </TestPlan>
     <hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="线程组">
@@ -36,10 +34,12 @@
           <stringProp name="filename"></stringProp>
           <stringProp name="parameters"></stringProp>
           <boolProp name="resetInterpreter">false</boolProp>
-          <stringProp name="script">import java.io.*;
+          <stringProp name="script">import org.apache.jmeter.services.FileServer;
+import java.io.*;
 import org.apache.commons.codec.binary.Base64;
 
-String a =&quot;/Users/home/Downloads/liujiankang/jmeter_script/jmeter_image/simple_face.jpeg&quot;;
+String jmxDir = FileServer.getFileServer().getBaseDir();
+String a = jmxDir + &quot;/jmeter_image/simple_face.jpeg&quot;;
  
 byte[] data = null;
  
@@ -61,11 +61,13 @@ vars.put(&quot;base64&quot;,base64.encodeToString(data));</stringProp>
           <boolProp name="resetInterpreter">false</boolProp>
           <stringProp name="parameters"></stringProp>
           <stringProp name="filename"></stringProp>
-          <stringProp name="script">import java.io.*;
+          <stringProp name="script">import org.apache.jmeter.services.FileServer;
+import java.io.*;
 import org.apache.commons.codec.binary.Base64;
 
-String a =&quot;/Users/home/Downloads/liujiankang/jmeter_script/jmeter_image/animal.jpeg&quot;;
- 
+String jmxDir = FileServer.getFileServer().getBaseDir();
+String a = jmxDir + &quot;/jmeter_image/animal.jpeg&quot;;
+
 byte[] data = null;
  
 try {
@@ -86,10 +88,12 @@ vars.put(&quot;animal_base64&quot;,base64.encodeToString(data));</stringProp>
           <boolProp name="resetInterpreter">false</boolProp>
           <stringProp name="parameters"></stringProp>
           <stringProp name="filename"></stringProp>
-          <stringProp name="script">import java.io.*;
+          <stringProp name="script">import org.apache.jmeter.services.FileServer;
+import java.io.*;
 import org.apache.commons.codec.binary.Base64;
 
-String a =&quot;/Users/home/Downloads/liujiankang/jmeter_script/jmeter_image/clotheimage.png&quot;;
+String jmxDir = FileServer.getFileServer().getBaseDir();
+String a = jmxDir + &quot;/jmeter_image/clotheimage.jpeg&quot;;
  
 byte[] data = null;
  
@@ -107,7 +111,7 @@ Base64 base64 = new Base64();
 vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
         </BeanShellPreProcessor>
         <hashTree/>
-        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器">
           <collectionProp name="HeaderManager.headers">
             <elementProp name="" elementType="Header">
               <stringProp name="Header.name">pkg</stringProp>
@@ -354,9 +358,9 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="生成视频任务" enabled="false"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="生成视频任务" enabled="true"/>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="图片限制检测" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="图片限制检测">
             <stringProp name="HTTPSampler.path">/api/airepair/detect/image</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -381,7 +385,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON断言" enabled="false">
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON断言">
               <stringProp name="JSON_PATH">$.result.pass</stringProp>
               <stringProp name="EXPECTED_VALUE">true</stringProp>
               <boolProp name="JSONVALIDATION">true</boolProp>
@@ -1079,7 +1083,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
         </hashTree>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="AI写真" enabled="false"/>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="分页获取所有活动" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="分页获取所有活动" enabled="false">
             <stringProp name="HTTPSampler.path">/api/face/material/getAllActivity</stringProp>
             <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
@@ -1105,7 +1109,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             </elementProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="false">
               <collectionProp name="Asserion.test_strings">
                 <stringProp name="2048619658">activityId</stringProp>
               </collectionProp>
@@ -1883,7 +1887,7 @@ vars.put(&quot;clothe_base64&quot;,base64.encodeToString(data));</stringProp>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="查看结果树" enabled="true">
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="查看结果树">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
